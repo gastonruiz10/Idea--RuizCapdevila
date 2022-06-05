@@ -1,0 +1,420 @@
+@import "base/variables";
+@import "base/mixin";
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+header{
+  background-color: #e8cdcd;
+  border-bottom: 2px solid rgb(224, 171, 171);
+  height: 150px;
+  display: grid;
+  grid-template-areas: "tittle nav";
+  h1{
+      grid-area: tittle;
+      margin-top: 2rem;
+      margin-left: 3rem;
+      max-width: 200px;
+      max-height: 200px;
+  }
+  nav{
+      grid-area: nav;
+  }
+}
+
+a{
+    text-decoration: none;
+    background-image: linear-gradient(currentColor, currentColor);
+    background-position: 0% 100%;
+    background-repeat: no-repeat;
+    background-size: 0% 2px;
+    transition: background-size .3s;
+}
+a:hover, a:focus {
+    background-size: 100% 2px;
+}
+
+.main-index{
+    display: grid;
+    grid-template-areas: "img-indexp img-indexp"
+                          "img-indexh img-indexm";
+    justify-content: center;
+    justify-items: center;
+}
+
+.img-indexp{
+    grid-area: img-indexp;
+    margin: 1rem;
+}
+
+.img-indexh{
+    grid-area: img-indexh;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.img-indexh:hover {filter: grayscale(80%);}
+
+.img-indexm{
+    grid-area: img-indexm;
+    margin: 1rem;
+    padding: 1rem;
+}
+
+.img-indexm:hover {filter: grayscale(80%);}
+
+section{
+    h3{
+    font-family: $font-texto;
+    font-weight: bolder;
+    font-size: 1rem;
+    text-align: center;
+    margin-top: 2rem;
+    }
+    form{
+        font-family: $font-texto;
+        font-weight: bolder;
+        display: flex;
+        justify-content: center;
+        margin: 1rem;
+        margin-bottom: 2rem;
+    }
+}
+
+.lookbook{
+    display: grid;
+    grid-template-areas: "texto1 fot-look1"
+                          "fot-look2 texto2";
+    margin: 5rem;
+}
+
+.texto1{
+    grid-area: texto1;
+    font-family: $font-secundario;
+    margin-top: 2rem;
+    margin: 0.5rem;
+}
+
+.texto2{
+    grid-area: texto2;
+    font-family: $font-secundario;
+    margin-top: 2rem;
+    margin: 0.5rem;
+}
+
+.fot-look1{
+    grid-area: fot-look1;
+    margin: 1rem;
+    transition-duration: $carousel-transition-duration;
+}
+
+.fot-look2{
+    grid-area: fot-look2;
+    margin: 1rem;
+    transition-duration: $carousel-transition-duration;
+}
+
+h2{
+    font-family: $font-texto;
+    font-weight: bold;
+    margin: 2rem;
+}
+.main-contacto{
+    margin: 20px;
+    padding: 20px;
+    font-family: $font-secundario;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    justify-items: center;
+    grid-area: main-contacto;
+}
+
+.formMargin{
+    margin: 10px;
+}
+
+.contacto{
+    display: grid;
+    grid-template-areas: "main-contacto fot-form";
+}
+
+.fot-form{
+    grid-area: fot-form;
+    padding: 2rem;
+}
+
+footer{
+    display: flex;
+    justify-content: space-around;
+    background-color: #e8cdcd;
+    border-top: 2px solid rgb(224, 171, 171);
+    p{
+        font-family: Arial, Helvetica, sans-serif;
+        font-weight: lighter;
+        font-size: $media-footer;
+        margin-top: 1.5rem;
+    }
+    div{
+        p{
+        font-family: 'Roboto', sans-serif;
+        font-weight: bolder;
+        font-size: $media-footer;
+        margin-top: 1rem;
+     }
+    }
+}
+
+.ig-footer{
+    margin-bottom: 1rem;
+}
+
+.tienda-hombre{
+    display: grid;
+    grid-template-areas: "fot-hom1 fot-hom2"
+                         "fot-hom3 fot-hom4"
+                         "fot-hom5 fot-hom5"
+                         "fot-hom6 fot-hom7"
+                         "fot-hom8 fot-hom9"
+                         "fot-hom10 fot-hom10"
+                         "fot-hom11 fot-hom12";
+    justify-content: center;
+    justify-items: center;
+    margin-top: 50px;
+}
+
+.fot-hom1{
+    grid-area: fot-hom1;
+    @include tienda-art;
+}
+
+.fot-hom2{
+    grid-area: fot-hom2;
+    @include tienda-art;
+}
+
+.fot-hom3{
+    grid-area: fot-hom3;
+    @include tienda-art;
+}
+
+.fot-hom4{
+    grid-area: fot-hom4;
+    @include tienda-art;
+}
+
+.fot-hom5{
+    grid-area: fot-hom5;
+    @include tienda-art;
+}
+
+.fot-hom6{
+    grid-area: fot-hom6;
+    @include tienda-art;
+}
+
+.fot-hom7{
+    grid-area: fot-hom7;
+    @include tienda-art;
+}
+
+.fot-hom8{
+    grid-area: fot-hom8;
+    @include tienda-art;
+}
+
+.fot-hom9{
+    grid-area: fot-hom9;
+    @include tienda-art;
+}
+
+.fot-hom10{
+    grid-area: fot-hom10;
+    @include tienda-art;
+}
+
+.fot-hom11{
+    grid-area: fot-hom11;
+    @include tienda-art;
+}
+
+.fot-hom12{
+    grid-area: fot-hom12;
+    @include tienda-art;
+}
+
+.descripcion-prenda{
+    @include descripcion-prendas;
+}
+
+@media screen and (max-width:800px) {
+    header{
+        height: 150px;
+        display: grid;
+        grid-template-areas: "tittle nav"
+        div{
+            grid-area: tittle;
+            max-width: 150px;
+            max-height: 150px;       
+        }
+        nav{
+            grid-area: nav;
+        }
+      }
+
+    .main-index{
+        grid-template-areas: "img-indexp"
+                             "img-indexh"
+                             "img-indexm";
+        column-gap: 2.5rem;
+    }
+
+    .img-indexp{
+        width: 100%;
+        grid-area: img-indexp;
+        margin: 1%;
+        padding: 0%;
+    }
+    
+    .img-indexh{
+        width: 100%;
+        grid-area: img-indexh;
+        margin: 1%;
+        padding: 0%;
+    }
+    
+    .img-indexm{
+        width: 100%;
+        grid-area: img-indexm;
+        margin: 1%;
+        padding: 0%;
+    }
+    
+    section{
+        display: none;
+    }
+
+    .contacto{
+        display: grid;
+        grid-template-areas: "main-contacto"
+                             "fot-form";
+    }
+}
+
+@media screen and (max-width:1240px) {
+    .tienda-hombre{
+        display: grid;
+        grid-template-areas: "fot-hom1" 
+                             "fot-hom2"
+                             "fot-hom3" 
+                             "fot-hom4"
+                             "fot-hom5" 
+                             "fot-hom5"
+                             "fot-hom6" 
+                             "fot-hom7"
+                             "fot-hom8" 
+                             "fot-hom9"
+                             "fot-hom10" 
+                             "fot-hom10"
+                             "fot-hom11" 
+                             "fot-hom12";
+        justify-content: center;
+        justify-items: center;
+        margin-top: 50px;
+    }
+    
+    .fot-hom1{
+        grid-area: fot-hom1;
+        @include tienda-art;
+    }
+    
+    .fot-hom2{
+        grid-area: fot-hom2;
+        @include tienda-art;
+    }
+    
+    .fot-hom3{
+        grid-area: fot-hom3;
+        @include tienda-art;
+    }
+    
+    .fot-hom4{
+        grid-area: fot-hom4;
+        @include tienda-art;
+    }
+    
+    .fot-hom5{
+        grid-area: fot-hom5;
+        @include tienda-art;
+    }
+    
+    .fot-hom6{
+        grid-area: fot-hom6;
+        @include tienda-art;
+    }
+    
+    .fot-hom7{
+        grid-area: fot-hom7;
+        @include tienda-art;
+    }
+    
+    .fot-hom8{
+        grid-area: fot-hom8;
+        @include tienda-art;
+    }
+    
+    .fot-hom9{
+        grid-area: fot-hom9;
+        @include tienda-art;
+    }
+    
+    .fot-hom10{
+        grid-area: fot-hom10;
+        @include tienda-art;
+    }
+    
+    .fot-hom11{
+        grid-area: fot-hom11;
+        @include tienda-art;
+    }
+    
+    .fot-hom12{
+        grid-area: fot-hom12;
+        @include tienda-art;
+    }
+    
+    .descripcion-prenda{
+        @include descripcion-prendas;
+    }
+
+    .lookbook{
+        display: grid;
+        grid-template-areas: "fot-look1"
+                             "texto1"   
+                             "fot-look2"
+                             "texto2";
+    }
+
+    .fot-look1{
+        grid-area: fot-look1;
+        margin: 0.5rem;
+    }
+
+    .fot-look2{
+        grid-area: fot-look2;
+        margin: 0.5rem;
+    }
+
+    .texto1{
+        grid-area: texto1;
+        text-align: justify;
+    }
+
+    .texto2{
+        grid-area: texto2;
+        text-align: justify;
+    }
+}

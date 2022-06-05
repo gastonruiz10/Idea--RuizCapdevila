@@ -1,0 +1,12 @@
+@mixin tienda-art {
+    margin: 10px;
+    padding: 10px;
+    justify-content: center;
+    justify-items: center;
+}
+
+@mixin descripcion-prendas {
+    font-family: $font-texto;
+    font-size: 15px;
+    font-weight: bold;
+}
