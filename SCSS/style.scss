@@ -6,13 +6,14 @@
     box-sizing: border-box;
 }
 
-
+/*Estilos del header*/
 header{
   background-color: #e8cdcd;
   border-bottom: 2px solid rgb(224, 171, 171);
   height: 150px;
   display: grid;
   grid-template-areas: "tittle nav";
+  margin-bottom: 3rem;
   h1{
       grid-area: tittle;
       margin-top: 2rem;
@@ -37,6 +38,7 @@ a:hover, a:focus {
     background-size: 100% 2px;
 }
 
+/*Estilos del main page index*/ 
 .main-index{
     display: grid;
     grid-template-areas: "img-indexp img-indexp"
@@ -48,6 +50,8 @@ a:hover, a:focus {
 .img-indexp{
     grid-area: img-indexp;
     margin: 1rem;
+    margin-top: 3rem;
+    
 }
 
 .img-indexh{
@@ -83,40 +87,34 @@ section{
         margin-bottom: 2rem;
     }
 }
-
+ /*Estilos page LookBook*/ 
 .lookbook{
-    display: grid;
-    grid-template-areas: "texto1 fot-look1"
-                          "fot-look2 texto2";
-    margin: 5rem;
+   display: grid;
+   grid-template-areas: "texto1 fot-look1";
+   margin-top: 4rem;
+   margin: 2rem;
 }
 
 .texto1{
     grid-area: texto1;
-    font-family: $font-secundario;
-    margin-top: 2rem;
-    margin: 0.5rem;
+    padding: 1rem;
+    font: $font-texto;
+    text-align: justify;
+    position: relative;
+    top: 30%;    
 }
 
-.texto2{
-    grid-area: texto2;
-    font-family: $font-secundario;
-    margin-top: 2rem;
-    margin: 0.5rem;
+.frase-texto{
+    text-align: right;
+    font-weight: bold;
+    font: $font-texto;
 }
 
 .fot-look1{
     grid-area: fot-look1;
-    margin: 1rem;
-    transition-duration: $carousel-transition-duration;
+    width: 100%;
 }
-
-.fot-look2{
-    grid-area: fot-look2;
-    margin: 1rem;
-    transition-duration: $carousel-transition-duration;
-}
-
+/*Estilos page Contacto*/
 h2{
     font-family: $font-texto;
     font-weight: bold;
@@ -147,108 +145,42 @@ h2{
     padding: 2rem;
 }
 
+/*Estilos del Footer*/
 footer{
-    display: flex;
-    justify-content: space-around;
     background-color: #e8cdcd;
     border-top: 2px solid rgb(224, 171, 171);
+    text-align: center;
     p{
-        font-family: Arial, Helvetica, sans-serif;
+        font-family: $font-secundario;
         font-weight: lighter;
         font-size: $media-footer;
         margin-top: 1.5rem;
     }
-    div{
-        p{
-        font-family: 'Roboto', sans-serif;
-        font-weight: bolder;
-        font-size: $media-footer;
-        margin-top: 1rem;
-     }
-    }
 }
 
-.ig-footer{
-    margin-bottom: 1rem;
+.textoFooter{
+    font-size: 10px;
 }
-
-.tienda-hombre{
+ 
+/*Estilos pages tienda hombre y mujer*/
+.tienda{
+    margin-top: 3rem;
     display: grid;
-    grid-template-areas: "fot-hom1 fot-hom2"
-                         "fot-hom3 fot-hom4"
-                         "fot-hom5 fot-hom5"
-                         "fot-hom6 fot-hom7"
-                         "fot-hom8 fot-hom9"
-                         "fot-hom10 fot-hom10"
-                         "fot-hom11 fot-hom12";
+    grid-template-columns: 1fr 1fr 1fr;
     justify-content: center;
     justify-items: center;
-    margin-top: 50px;
+    margin: 2rem;
 }
 
-.fot-hom1{
-    grid-area: fot-hom1;
-    @include tienda-art;
-}
-
-.fot-hom2{
-    grid-area: fot-hom2;
-    @include tienda-art;
-}
-
-.fot-hom3{
-    grid-area: fot-hom3;
-    @include tienda-art;
-}
-
-.fot-hom4{
-    grid-area: fot-hom4;
-    @include tienda-art;
-}
-
-.fot-hom5{
-    grid-area: fot-hom5;
-    @include tienda-art;
-}
-
-.fot-hom6{
-    grid-area: fot-hom6;
-    @include tienda-art;
-}
-
-.fot-hom7{
-    grid-area: fot-hom7;
-    @include tienda-art;
-}
-
-.fot-hom8{
-    grid-area: fot-hom8;
-    @include tienda-art;
-}
-
-.fot-hom9{
-    grid-area: fot-hom9;
-    @include tienda-art;
-}
-
-.fot-hom10{
-    grid-area: fot-hom10;
-    @include tienda-art;
-}
-
-.fot-hom11{
-    grid-area: fot-hom11;
-    @include tienda-art;
-}
-
-.fot-hom12{
-    grid-area: fot-hom12;
-    @include tienda-art;
+.fotoTienda{
+    margin: 1rem;
 }
 
 .descripcion-prenda{
     @include descripcion-prendas;
 }
+
+/*Estilos Medidas Query*/ 
 
 @media screen and (max-width:800px) {
     header{
@@ -293,10 +225,8 @@ footer{
         padding: 0%;
     }
     
-    section{
-        display: none;
-    }
 
+/*Estilos page contacto MQ 800px*/
     .contacto{
         display: grid;
         grid-template-areas: "main-contacto"
@@ -305,116 +235,36 @@ footer{
 }
 
 @media screen and (max-width:1240px) {
-    .tienda-hombre{
+    /*Estilos pages tienda MQ 1240px*/
+    .tienda{
         display: grid;
-        grid-template-areas: "fot-hom1" 
-                             "fot-hom2"
-                             "fot-hom3" 
-                             "fot-hom4"
-                             "fot-hom5" 
-                             "fot-hom5"
-                             "fot-hom6" 
-                             "fot-hom7"
-                             "fot-hom8" 
-                             "fot-hom9"
-                             "fot-hom10" 
-                             "fot-hom10"
-                             "fot-hom11" 
-                             "fot-hom12";
+        grid-template-columns: 1fr 1fr;
+        margin-top: 3rem;
         justify-content: center;
         justify-items: center;
-        margin-top: 50px;
-    }
-    
-    .fot-hom1{
-        grid-area: fot-hom1;
-        @include tienda-art;
-    }
-    
-    .fot-hom2{
-        grid-area: fot-hom2;
-        @include tienda-art;
-    }
-    
-    .fot-hom3{
-        grid-area: fot-hom3;
-        @include tienda-art;
-    }
-    
-    .fot-hom4{
-        grid-area: fot-hom4;
-        @include tienda-art;
-    }
-    
-    .fot-hom5{
-        grid-area: fot-hom5;
-        @include tienda-art;
-    }
-    
-    .fot-hom6{
-        grid-area: fot-hom6;
-        @include tienda-art;
-    }
-    
-    .fot-hom7{
-        grid-area: fot-hom7;
-        @include tienda-art;
-    }
-    
-    .fot-hom8{
-        grid-area: fot-hom8;
-        @include tienda-art;
-    }
-    
-    .fot-hom9{
-        grid-area: fot-hom9;
-        @include tienda-art;
-    }
-    
-    .fot-hom10{
-        grid-area: fot-hom10;
-        @include tienda-art;
-    }
-    
-    .fot-hom11{
-        grid-area: fot-hom11;
-        @include tienda-art;
-    }
-    
-    .fot-hom12{
-        grid-area: fot-hom12;
-        @include tienda-art;
+        margin: 2rem;
     }
     
     .descripcion-prenda{
         @include descripcion-prendas;
     }
-
+/*Estilos page nosotros/lookbook MQ 1240px*/
     .lookbook{
         display: grid;
         grid-template-areas: "fot-look1"
-                             "texto1"   
-                             "fot-look2"
-                             "texto2";
-    }
-
-    .fot-look1{
-        grid-area: fot-look1;
-        margin: 0.5rem;
-    }
-
-    .fot-look2{
-        grid-area: fot-look2;
-        margin: 0.5rem;
+                              "texto1";
     }
 
     .texto1{
         grid-area: texto1;
+        padding: 1rem;
         text-align: justify;
+        margin-bottom: 2rem;
+        top: 0%;    
     }
 
-    .texto2{
-        grid-area: texto2;
-        text-align: justify;
+    .fot-look1{
+        grid-area: fot-look1;
+        width: 100%;
     }
 }

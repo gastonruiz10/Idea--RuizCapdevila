@@ -3,13 +3,15 @@
   padding: 0;
   box-sizing: border-box;
 }
-/*Estilos de header*/
+
+/*Estilos del header*/
 header {
   background-color: #e8cdcd;
   border-bottom: 2px solid rgb(224, 171, 171);
   height: 150px;
   display: grid;
   grid-template-areas: "tittle nav";
+  margin-bottom: 3rem;
 }
 header h1 {
   grid-area: tittle;
@@ -34,7 +36,8 @@ a {
 a:hover, a:focus {
   background-size: 100% 2px;
 }
-/*Estilos de main*/
+
+/*Estilos del main page index*/
 .main-index {
   display: grid;
   grid-template-areas: "img-indexp img-indexp" "img-indexh img-indexm";
@@ -45,6 +48,7 @@ a:hover, a:focus {
 .img-indexp {
   grid-area: img-indexp;
   margin: 1rem;
+  margin-top: 3rem;
 }
 
 .img-indexh {
@@ -83,38 +87,35 @@ section form {
   margin-bottom: 2rem;
 }
 
+/*Estilos page LookBook*/
 .lookbook {
   display: grid;
-  grid-template-areas: "texto1 fot-look1" "fot-look2 texto2";
-  margin: 5rem;
+  grid-template-areas: "texto1 fot-look1";
+  margin-top: 4rem;
+  margin: 2rem;
 }
 
 .texto1 {
   grid-area: texto1;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-top: 2rem;
-  margin: 0.5rem;
+  padding: 1rem;
+  font: "Roboto", sans-serif;
+  text-align: justify;
+  position: relative;
+  top: 30%;
 }
 
-.texto2 {
-  grid-area: texto2;
-  font-family: Arial, Helvetica, sans-serif;
-  margin-top: 2rem;
-  margin: 0.5rem;
+.frase-texto {
+  text-align: right;
+  font-weight: bold;
+  font: "Roboto", sans-serif;
 }
 
 .fot-look1 {
   grid-area: fot-look1;
-  margin: 1rem;
-  transition-duration: 0.1s;
+  width: 100%;
 }
 
-.fot-look2 {
-  grid-area: fot-look2;
-  margin: 1rem;
-  transition-duration: 0.1s;
-}
-
+/*Estilos page Contacto*/
 h2 {
   font-family: "Roboto", sans-serif;
   font-weight: bold;
@@ -145,12 +146,12 @@ h2 {
   grid-area: fot-form;
   padding: 2rem;
 }
-/*Estilos del footer*/
+
+/*Estilos del Footer*/
 footer {
-  display: flex;
-  justify-content: space-around;
   background-color: #e8cdcd;
   border-top: 2px solid rgb(224, 171, 171);
+  text-align: center;
 }
 footer p {
   font-family: Arial, Helvetica, sans-serif;
@@ -158,119 +159,23 @@ footer p {
   font-size: 1rem;
   margin-top: 1.5rem;
 }
-footer div p {
-  font-family: "Roboto", sans-serif;
-  font-weight: bolder;
-  font-size: 1rem;
-  margin-top: 1rem;
+
+.textoFooter {
+  font-size: 10px;
 }
 
-.ig-footer {
-  margin-bottom: 1rem;
-}
-
-.tienda-hombre {
+/*Estilos pages tienda hombre y mujer*/
+.tienda {
+  margin-top: 3rem;
   display: grid;
-  grid-template-areas: "fot-hom1 fot-hom2" "fot-hom3 fot-hom4" "fot-hom5 fot-hom5" "fot-hom6 fot-hom7" "fot-hom8 fot-hom9" "fot-hom10 fot-hom10" "fot-hom11 fot-hom12";
+  grid-template-columns: 1fr 1fr 1fr;
   justify-content: center;
   justify-items: center;
-  margin-top: 50px;
+  margin: 2rem;
 }
 
-.fot-hom1 {
-  grid-area: fot-hom1;
-  margin: 10px;
-  padding: 10px;
-  justify-content: center;
-  justify-items: center;
-}
-
-.fot-hom2 {
-  grid-area: fot-hom2;
-  margin: 10px;
-  padding: 10px;
-  justify-content: center;
-  justify-items: center;
-}
-
-.fot-hom3 {
-  grid-area: fot-hom3;
-  margin: 10px;
-  padding: 10px;
-  justify-content: center;
-  justify-items: center;
-}
-
-.fot-hom4 {
-  grid-area: fot-hom4;
-  margin: 10px;
-  padding: 10px;
-  justify-content: center;
-  justify-items: center;
-}
-
-.fot-hom5 {
-  grid-area: fot-hom5;
-  margin: 10px;
-  padding: 10px;
-  justify-content: center;
-  justify-items: center;
-}
-
-.fot-hom6 {
-  grid-area: fot-hom6;
-  margin: 10px;
-  padding: 10px;
-  justify-content: center;
-  justify-items: center;
-}
-
-.fot-hom7 {
-  grid-area: fot-hom7;
-  margin: 10px;
-  padding: 10px;
-  justify-content: center;
-  justify-items: center;
-}
-
-.fot-hom8 {
-  grid-area: fot-hom8;
-  margin: 10px;
-  padding: 10px;
-  justify-content: center;
-  justify-items: center;
-}
-
-.fot-hom9 {
-  grid-area: fot-hom9;
-  margin: 10px;
-  padding: 10px;
-  justify-content: center;
-  justify-items: center;
-}
-
-.fot-hom10 {
-  grid-area: fot-hom10;
-  margin: 10px;
-  padding: 10px;
-  justify-content: center;
-  justify-items: center;
-}
-
-.fot-hom11 {
-  grid-area: fot-hom11;
-  margin: 10px;
-  padding: 10px;
-  justify-content: center;
-  justify-items: center;
-}
-
-.fot-hom12 {
-  grid-area: fot-hom12;
-  margin: 10px;
-  padding: 10px;
-  justify-content: center;
-  justify-items: center;
+.fotoTienda {
+  margin: 1rem;
 }
 
 .descripcion-prenda {
@@ -278,7 +183,8 @@ footer div p {
   font-size: 15px;
   font-weight: bold;
 }
-/*Medidas queries*/
+
+/*Estilos Medidas Query*/
 @media screen and (max-width: 800px) {
   header {
     height: 150px;
@@ -313,130 +219,42 @@ footer div p {
     margin: 1%;
     padding: 0%;
   }
-  section {
-    display: none;
-  }
+  /*Estilos page contacto MQ 800px*/
   .contacto {
     display: grid;
     grid-template-areas: "main-contacto" "fot-form";
   }
 }
 @media screen and (max-width: 1240px) {
-  .tienda-hombre {
+  /*Estilos pages tienda MQ 1240px*/
+  .tienda {
     display: grid;
-    grid-template-areas: "fot-hom1" "fot-hom2" "fot-hom3" "fot-hom4" "fot-hom5" "fot-hom5" "fot-hom6" "fot-hom7" "fot-hom8" "fot-hom9" "fot-hom10" "fot-hom10" "fot-hom11" "fot-hom12";
+    grid-template-columns: 1fr 1fr;
+    margin-top: 3rem;
     justify-content: center;
     justify-items: center;
-    margin-top: 50px;
-  }
-  .fot-hom1 {
-    grid-area: fot-hom1;
-    margin: 10px;
-    padding: 10px;
-    justify-content: center;
-    justify-items: center;
-  }
-  .fot-hom2 {
-    grid-area: fot-hom2;
-    margin: 10px;
-    padding: 10px;
-    justify-content: center;
-    justify-items: center;
-  }
-  .fot-hom3 {
-    grid-area: fot-hom3;
-    margin: 10px;
-    padding: 10px;
-    justify-content: center;
-    justify-items: center;
-  }
-  .fot-hom4 {
-    grid-area: fot-hom4;
-    margin: 10px;
-    padding: 10px;
-    justify-content: center;
-    justify-items: center;
-  }
-  .fot-hom5 {
-    grid-area: fot-hom5;
-    margin: 10px;
-    padding: 10px;
-    justify-content: center;
-    justify-items: center;
-  }
-  .fot-hom6 {
-    grid-area: fot-hom6;
-    margin: 10px;
-    padding: 10px;
-    justify-content: center;
-    justify-items: center;
-  }
-  .fot-hom7 {
-    grid-area: fot-hom7;
-    margin: 10px;
-    padding: 10px;
-    justify-content: center;
-    justify-items: center;
-  }
-  .fot-hom8 {
-    grid-area: fot-hom8;
-    margin: 10px;
-    padding: 10px;
-    justify-content: center;
-    justify-items: center;
-  }
-  .fot-hom9 {
-    grid-area: fot-hom9;
-    margin: 10px;
-    padding: 10px;
-    justify-content: center;
-    justify-items: center;
-  }
-  .fot-hom10 {
-    grid-area: fot-hom10;
-    margin: 10px;
-    padding: 10px;
-    justify-content: center;
-    justify-items: center;
-  }
-  .fot-hom11 {
-    grid-area: fot-hom11;
-    margin: 10px;
-    padding: 10px;
-    justify-content: center;
-    justify-items: center;
-  }
-  .fot-hom12 {
-    grid-area: fot-hom12;
-    margin: 10px;
-    padding: 10px;
-    justify-content: center;
-    justify-items: center;
+    margin: 2rem;
   }
   .descripcion-prenda {
     font-family: "Roboto", sans-serif;
     font-size: 15px;
     font-weight: bold;
   }
+  /*Estilos page nosotros/lookbook MQ 1240px*/
   .lookbook {
     display: grid;
-    grid-template-areas: "fot-look1" "texto1" "fot-look2" "texto2";
-  }
-  .fot-look1 {
-    grid-area: fot-look1;
-    margin: 0.5rem;
-  }
-  .fot-look2 {
-    grid-area: fot-look2;
-    margin: 0.5rem;
+    grid-template-areas: "fot-look1" "texto1";
   }
   .texto1 {
     grid-area: texto1;
+    padding: 1rem;
     text-align: justify;
+    margin-bottom: 2rem;
+    top: 0%;
   }
-  .texto2 {
-    grid-area: texto2;
-    text-align: justify;
+  .fot-look1 {
+    grid-area: fot-look1;
+    width: 100%;
   }
 }
 
